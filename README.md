@@ -1,3 +1,5 @@
+# Startup Website
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -5,9 +7,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-npm run dev
+npm start
 # or
-yarn dev
+yarn start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -17,6 +19,74 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Quick Start
+
+### Pre-requisites
+
+Make sure you have `node` v16.13.1 installed with npm v8.1.2.
+If not, it is recommended to install it using nvm (https://github.com/nvm-sh/nvm#install--update-script).
+
+```shell
+node --version
+v16.13.1
+
+npm --version
+v8.1.2
+```
+
+### Install npm dependencies
+
+```shell
+npm install
+```
+
+### Start App
+
+Run Application using command:
+
+```shell
+npm start
+```
+
+### Build App
+
+The following command is used to create a build:
+
+```shell
+npm run build
+```
+
+### App Other Script Commands
+
+#### The following commands used for different cases:
+
+To check and fixing the `linting` in project
+
+```shell
+npm run lint
+
+npm run lint:fix
+```
+
+To check and fixing the `formatting` in project
+
+```shell
+npm run format
+```
+
+To generate `svg icon as component` and its `stories`
+
+```shell
+npm run sync-icons
+```
+
+To generate `fully tested build`
+
+```shell
+npm run is-ready
+
+```
 
 ## Learn More
 

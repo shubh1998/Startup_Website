@@ -10,9 +10,9 @@
     "start-build": "next start",
     "next-lint": "next lint",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
-    "lint:fix": "yarn lint --fix",
+    "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,scss,css,json}'",
-    "is-ready": "yarn format && yarn lint && yarn build",
+    "is-ready": "npm run format && npm run lint && npm run build",
     "prepare": "husky install",
     "sync-icons": "node bin/sync_icons.js"
   },
@@ -31,7 +31,7 @@
       "prettier --write"
     ],
     "src/**/*.{js,jsx,ts,tsx}": [
-      "yarn lint",
+      "npm run lint",
       "prettier --write"
     ]
   },

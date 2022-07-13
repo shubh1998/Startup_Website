@@ -1,5 +1,5 @@
-import React from 'react'
 import { NextPage } from 'next'
+import React from 'react'
 import Vercel from '../../assets/images/vercel.svg'
 
 const Home: NextPage = () => {
