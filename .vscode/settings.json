@@ -27,9 +27,7 @@
   "editor.minimap.enabled": true,
   "editor.renderControlCharacters": false,
   "editor.renderFinalNewline": true,
-  "editor.rulers": [
-    120
-  ],
+  "editor.rulers": [120],
   "editor.multiCursorModifier": "alt",
   "editor.autoIndent": "full",
   "editor.detectIndentation": false,
