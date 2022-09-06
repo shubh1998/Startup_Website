@@ -1,6 +1,4 @@
 {
-  "solidity.compileUsingRemoteVersion": "0.5.8",
-  "material-icon-theme.showUpdateMessage": false,
   "window.zoomLevel": 0,
   "workbench.iconTheme": "vscode-icons",
   "workbench.statusBar.visible": true,
@@ -29,10 +27,13 @@
   "editor.minimap.enabled": true,
   "editor.renderControlCharacters": false,
   "editor.renderFinalNewline": true,
-  "editor.rulers": [120],
+  "editor.rulers": [
+    120
+  ],
   "editor.multiCursorModifier": "alt",
   "editor.autoIndent": "full",
   "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
@@ -201,15 +202,5 @@
     "webfontloader",
     "yellow",
     "yellow rotate btns"
-  ],
-  "solidity.linter": "solhint",
-  "todohighlight.defaultStyle": {
-    "color": "red",
-    "backgroundColor": "rgba(0,0,0,.2)",
-    "overviewRulerColor": "rgba(0,0,0,.2)",
-    "cursor": "pointer",
-    "border": "1px solid red",
-    "borderRadius": "5px",
-    "isWholeLine": true
-  }
+  ]
 }

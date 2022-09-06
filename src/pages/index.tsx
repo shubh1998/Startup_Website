@@ -1,4 +1,5 @@
 import { NextPage } from 'next'
+
 // import Image from 'next/image'
 // import styles from '../assets/styles/Home.module.css'
 import Vercel from '../assets/images/vercel.svg'

@@ -3,23 +3,58 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prestart": "node bin/restrictNodeVersion",
+    "preinstall": "node bin/restrictNodeVersion",
     "start": "next dev",
     "build": "next build",
     "start-build": "next start",
-    "next-lint": "next lint"
+    "next-lint": "next lint",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,scss,css,json}'",
+    "is-ready": "yarn format && yarn lint && yarn build",
+    "prepare": "husky install",
+    "sync-icons": "node bin/sync_icons.js"
   },
   "dependencies": {
     "next": "12.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{json,css,scss,md}": [
+      "prettier --write"
+    ],
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "yarn lint",
+      "prettier --write"
+    ]
+  },
   "devDependencies": {
+    "@svgr/webpack": "5.5.0",
     "@types/node": "18.0.3",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
+    "@typescript-eslint/eslint-plugin": "5.30.6",
+    "@typescript-eslint/parser": "5.30.6",
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.1",
-    "typescript": "4.7.4",
-    "@svgr/webpack": "5.5.0"
+    "eslint-config-prettier": "8.5.0",
+    "eslint-import-resolver-node": "0.3.6",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.30.1",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "glob": "7.1.6",
+    "humps": "2.0.1",
+    "husky": "7.0.4",
+    "lint-staged": "12.1.2",
+    "prettier": "2.4.1",
+    "typescript": "4.7.4"
   }
 }
