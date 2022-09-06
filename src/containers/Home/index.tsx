@@ -1,13 +1,15 @@
+import Footer from '@components/layouts/Footer'
+import Navbar from '@components/layouts/Navbar'
 import {
-  AppBar,
-  Box,
   Button,
   Card,
   CardActions,
   CardContent,
   Grid,
   IconButton,
-  Toolbar,
+  List,
+  ListItem,
+  TextField,
   Typography,
 } from '@mui/material'
 import { NextPage } from 'next'
@@ -17,10 +19,11 @@ import Typed from 'react-typed'
 import Wave from 'react-wavify'
 
 import Features from '../../assets/images/feat.svg'
+import MeetIcon from '../../assets/images/image1.svg'
+import PeopleIcon from '../../assets/images/image2.svg'
+import ChartsIcon from '../../assets/images/image3.svg'
 import LaptopIcon from '../../assets/images/laptop.svg'
-// import Vercel from '../../assets/images/vercel.svg'
-
-const navItems = ['Home', 'Services', 'Technologies', 'Projects', 'Industry Solutions', 'About Us']
+import MobileIcon from '../../assets/images/mobile.svg'
 
 const FeatureItem = ({ color }) => {
   return (
@@ -33,7 +36,7 @@ const FeatureItem = ({ color }) => {
           }}
         >
           <Typography
-            sx={{ fontWeight: 800, fontSize: '24px', width: '100%', textAlign: 'center' }}
+            sx={{ fontWeight: 800, fontSize: '32px', width: '100%', textAlign: 'center' }}
             gutterBottom
           >
             Lets See Features
@@ -88,73 +91,10 @@ const FeatureItem = ({ color }) => {
 const Home: NextPage = () => {
   return (
     <>
-      <AppBar
-        position="fixed"
-        sx={{
-          backgroundColor: '#140a42',
-          boxShadow: 'none',
-          height: 85,
-          // border: '2px solid black',
-          color: 'black',
-          pt: '10px',
-          pr: '10%',
-          pl: '10%',
-        }}
-      >
-        <Toolbar>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              color: '#ffffff',
-              fontWeight: 800,
-              // display: { xs: 'none', sm: 'block' },
-            }}
-          >
-            Logo
-          </Typography>
-          <Box
-          // sx={{ display: { xs: 'none', sm: 'block' } }}
-          >
-            {navItems.map((item) => (
-              <Button
-                key={item}
-                sx={{
-                  color: '#ffffff',
-                  fontWeight: 550,
-                  textTransform: 'capitalize',
-                  height: 72,
-                  '&:hover': {
-                    borderBottom: '3px solid #ED003F',
-                    borderRadius: 0,
-                  },
-                }}
-              >
-                {item}
-              </Button>
-            ))}
-            <Button
-              sx={{
-                height: 40,
-                borderRadius: 8,
-                width: 160,
-                backgroundColor: '#ED003F',
-                color: 'white',
-                '&:hover': {
-                  backgroundColor: 'purple',
-                },
-              }}
-              variant="contained"
-            >
-              Start Project
-            </Button>
-          </Box>
-        </Toolbar>
-      </AppBar>
+      <Navbar />
       <Wave
         style={{
-          height: '90vh',
+          height: '95vh',
           zIndex: 5,
           margin: 0,
           transform: 'rotate(180deg)',
@@ -359,6 +299,342 @@ const Home: NextPage = () => {
           </Grid>
         </Grid>
       </>
+      <Grid
+        container
+        sx={{ width: { xl: '80%', lg: '90%', xs: '100%' }, margin: '60px auto auto auto' }}
+      >
+        <Grid item xs={6}>
+          <Typography
+            sx={{ fontWeight: 800, mt: '20px', fontSize: '28px', width: '80%', textAlign: 'left' }}
+            gutterBottom
+          >
+            Know Your Bussiness Find Beetter Solutions
+          </Typography>
+          <List>
+            <ListItem disablePadding>
+              <Typography
+                sx={{
+                  display: 'list-item',
+                  fontWeight: 400,
+                  fontSize: '18px',
+                  width: '100%',
+                  textAlign: 'left',
+                  color: 'gray',
+                }}
+                gutterBottom
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                dictum est a, mattis tellus.
+              </Typography>
+            </ListItem>
+            <ListItem disablePadding sx={{ mt: '10px' }}>
+              <Typography
+                sx={{
+                  fontWeight: 400,
+                  fontSize: '18px',
+                  width: '100%',
+                  textAlign: 'left',
+                  color: 'gray',
+                }}
+                gutterBottom
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                dictum est a, mattis tellus.
+              </Typography>
+            </ListItem>
+            <ListItem disablePadding sx={{ mt: '10px' }}>
+              <Typography
+                sx={{
+                  display: 'list-item',
+                  fontWeight: 400,
+                  fontSize: '18px',
+                  width: '100%',
+                  textAlign: 'left',
+                  color: 'gray',
+                }}
+                gutterBottom
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                dictum est a, mattis tellus.
+              </Typography>
+            </ListItem>
+            <ListItem disablePadding sx={{ mt: '10px' }}>
+              <Typography
+                sx={{
+                  fontWeight: 400,
+                  fontSize: '18px',
+                  width: '100%',
+                  textAlign: 'left',
+                  color: 'gray',
+                }}
+                gutterBottom
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                dictum est a, mattis tellus.
+              </Typography>
+            </ListItem>
+          </List>
+          <Button
+            sx={{
+              height: 40,
+              mt: '10px',
+              borderRadius: 8,
+              width: 150,
+              backgroundColor: '#5b5b98',
+              color: 'white',
+              '&:hover': {
+                backgroundColor: 'purple',
+              },
+            }}
+            variant="contained"
+          >
+            Contact Us
+          </Button>
+        </Grid>
+        <Grid item xs={6} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <MeetIcon />
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        sx={{ width: { xl: '80%', lg: '90%', xs: '100%' }, margin: '60px auto auto auto' }}
+      >
+        <Grid item xs={6}>
+          <ChartsIcon />
+        </Grid>
+        <Grid item xs={6}>
+          <Typography
+            sx={{ fontWeight: 800, mt: '20px', fontSize: '28px', width: '80%', textAlign: 'left' }}
+            gutterBottom
+          >
+            Know Your Bussiness Find Beetter Solutions
+          </Typography>
+          <List>
+            <ListItem disablePadding>
+              <Typography
+                sx={{
+                  display: 'list-item',
+                  fontWeight: 400,
+                  fontSize: '18px',
+                  width: '100%',
+                  textAlign: 'left',
+                  color: 'gray',
+                }}
+                gutterBottom
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                dictum est a, mattis tellus.
+              </Typography>
+            </ListItem>
+            <ListItem disablePadding sx={{ mt: '10px' }}>
+              <Typography
+                sx={{
+                  fontWeight: 400,
+                  fontSize: '18px',
+                  width: '100%',
+                  textAlign: 'left',
+                  color: 'gray',
+                }}
+                gutterBottom
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                dictum est a, mattis tellus.
+              </Typography>
+            </ListItem>
+            <ListItem disablePadding sx={{ mt: '10px' }}>
+              <Typography
+                sx={{
+                  display: 'list-item',
+                  fontWeight: 400,
+                  fontSize: '18px',
+                  width: '100%',
+                  textAlign: 'left',
+                  color: 'gray',
+                }}
+                gutterBottom
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                dictum est a, mattis tellus.
+              </Typography>
+            </ListItem>
+            <ListItem disablePadding sx={{ mt: '10px' }}>
+              <Typography
+                sx={{
+                  fontWeight: 400,
+                  fontSize: '18px',
+                  width: '100%',
+                  textAlign: 'left',
+                  color: 'gray',
+                }}
+                gutterBottom
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                dictum est a, mattis tellus.
+              </Typography>
+            </ListItem>
+          </List>
+          <Button
+            sx={{
+              height: 40,
+              mt: '10px',
+              borderRadius: 8,
+              width: 150,
+              backgroundColor: '#5b5b98',
+              color: 'white',
+              '&:hover': {
+                backgroundColor: 'purple',
+              },
+            }}
+            variant="contained"
+          >
+            Contact Us
+          </Button>
+        </Grid>
+      </Grid>
+      <div style={{ marginTop: '30px' }}>
+        <Typography
+          sx={{ fontWeight: 800, fontSize: '28px', width: '100%', textAlign: 'center' }}
+          gutterBottom
+        >
+          The People Trusted Us
+        </Typography>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <PeopleIcon />
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            width: '40%',
+            margin: 'auto',
+            marginTop: '15px',
+          }}
+        >
+          <div>
+            <Typography
+              sx={{ fontWeight: 800, fontSize: '32px', width: '100%', textAlign: 'center' }}
+              gutterBottom
+            >
+              5+
+            </Typography>
+            <Typography
+              sx={{
+                fontWeight: 400,
+                fontSize: '16px',
+                color: '#5b5b98',
+                width: '100%',
+                textAlign: 'center',
+              }}
+              gutterBottom
+            >
+              Experiance
+            </Typography>
+          </div>
+          <div>
+            <Typography
+              sx={{ fontWeight: 800, fontSize: '32px', width: '100%', textAlign: 'center' }}
+              gutterBottom
+            >
+              10+
+            </Typography>
+            <Typography
+              sx={{
+                fontWeight: 400,
+                fontSize: '16px',
+                color: '#5b5b98',
+                width: '100%',
+                textAlign: 'center',
+              }}
+              gutterBottom
+            >
+              Projects Delivered
+            </Typography>
+          </div>
+          <div>
+            <Typography
+              sx={{ fontWeight: 800, fontSize: '32px', width: '100%', textAlign: 'center' }}
+              gutterBottom
+            >
+              100+
+            </Typography>
+            <Typography
+              sx={{
+                fontWeight: 400,
+                fontSize: '16px',
+                color: '#5b5b98',
+                width: '100%',
+                textAlign: 'center',
+              }}
+              gutterBottom
+            >
+              Happy Clients
+            </Typography>
+          </div>
+        </div>
+        <Grid
+          container
+          sx={{ width: { xl: '80%', lg: '90%', xs: '100%' }, margin: '60px auto auto auto' }}
+        >
+          <Grid item xs={6}>
+            <MobileIcon />
+          </Grid>
+          <Grid item xs={6}>
+            <Typography
+              sx={{
+                fontWeight: 800,
+                mt: '20px',
+                fontSize: '28px',
+                width: '80%',
+                textAlign: 'left',
+              }}
+              gutterBottom
+            >
+              Connect With Us
+            </Typography>
+            <Typography
+              sx={{
+                fontWeight: 400,
+                fontSize: '18px',
+                width: '100%',
+                width: '70%',
+                textAlign: 'left',
+                color: 'gray',
+              }}
+              gutterBottom
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+              dictum est a, mattis tellus.
+            </Typography>
+            <div style={{ display: 'block', width: '60%', marginTop: '40px' }}>
+              <TextField required fullWidth id="outlined-required" defaultValue="Hello World" />
+              <TextField
+                sx={{ mt: '20px' }}
+                required
+                fullWidth
+                id="outlined-required"
+                defaultValue="Hello World"
+              />
+              <Button
+                sx={{
+                  height: 40,
+                  mt: '10px',
+                  borderRadius: 8,
+                  width: 150,
+                  backgroundColor: '#5b5b98',
+                  color: 'white',
+                  '&:hover': {
+                    backgroundColor: 'purple',
+                  },
+                }}
+                variant="contained"
+              >
+                Submit
+              </Button>
+            </div>
+          </Grid>
+        </Grid>
+      </div>
+      <Footer />
     </>
   )
 }
