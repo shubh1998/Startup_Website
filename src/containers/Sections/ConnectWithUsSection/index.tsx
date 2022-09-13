@@ -9,16 +9,33 @@ const ConnectWithUsSection = () => {
         container
         sx={{ width: { xl: '80%', lg: '90%', xs: '100%' }, margin: '60px auto auto auto' }}
       >
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={12}
+          lg={6}
+          sx={{
+            display: 'flex',
+            justifyContent: { xs: 'center', lg: 'flex-start' },
+          }}
+        >
           <MobileIcon />
         </Grid>
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={12}
+          lg={6}
+          sx={{
+            display: { xs: 'flex', lg: 'block' },
+            flexDirection: 'column',
+            alignItems: { xs: 'center', lg: 'flex-start' },
+          }}
+        >
           <Typography
             sx={{
               fontWeight: 800,
               mt: '20px',
               fontSize: '28px',
-              width: '80%',
+              width: { xs: '60%', lg: '80%' },
               textAlign: 'left',
             }}
             gutterBottom
@@ -30,7 +47,7 @@ const ConnectWithUsSection = () => {
               fontWeight: 400,
               fontSize: '18px',
               width: '100%',
-              width: '70%',
+              width: { xs: '60%', lg: '70%' },
               textAlign: 'left',
               color: 'gray',
             }}

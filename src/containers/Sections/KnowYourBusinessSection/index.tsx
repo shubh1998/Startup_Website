@@ -11,7 +11,17 @@ const KnowYourBusinessSection = () => {
         container
         sx={{ width: { xl: '80%', lg: '90%', xs: '100%' }, margin: '60px auto auto auto' }}
       >
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={12}
+          lg={6}
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: { xs: 'left', lg: 'flex-start' },
+            paddingLeft: { xs: '5%', lg: '0%' },
+          }}
+        >
           <Fade left>
             <Typography
               sx={{
@@ -107,7 +117,12 @@ const KnowYourBusinessSection = () => {
             </Button>
           </Fade>
         </Grid>
-        <Grid item xs={6} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <Grid
+          item
+          xs={12}
+          lg={6}
+          sx={{ display: 'flex', justifyContent: { xs: 'center', lg: 'flex-end' } }}
+        >
           <Fade right>
             <MeetIcon />
           </Fade>
@@ -117,12 +132,27 @@ const KnowYourBusinessSection = () => {
         container
         sx={{ width: { xl: '80%', lg: '90%', xs: '100%' }, margin: '60px auto auto auto' }}
       >
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={12}
+          lg={6}
+          id="desktop-image"
+          sx={{
+            display: { xs: 'none', lg: 'block' },
+          }}
+        >
           <Fade top>
             <ChartsIcon />
           </Fade>
         </Grid>
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={12}
+          lg={6}
+          sx={{
+            paddingLeft: { xs: '5%', lg: '0%' },
+          }}
+        >
           <Fade bottom>
             <Typography
               sx={{
