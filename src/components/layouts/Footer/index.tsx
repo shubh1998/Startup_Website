@@ -1,7 +1,6 @@
+import ArrowIcon from '@components/ui-kit/Icons/iconComponents/ArrowIcon'
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
-
-import Features from '../../../assets/images/feat.svg'
 
 const Footer = () => {
   const navItems = [
@@ -39,43 +38,48 @@ const Footer = () => {
         <div>
           <Typography
             variant="h4"
-            sx={{ color: '#ffffff', borderBottom: '1px solid #ED003F', width: '90%' }}
+            sx={{
+              color: '#ffffff',
+              borderBottom: '1px solid #ED003F',
+              width: '90%',
+              cursor: 'pointer',
+            }}
           >
             Logo
           </Typography>
         </div>
-        <div style={{ paddingTop: '3%', display: 'flex' }}>
+        <div style={{ paddingTop: '3%', display: 'flex', cursor: 'pointer' }}>
           <div>
-            <Features />
+            <ArrowIcon />
           </div>
           <div>
-            <Typography style={{ color: '#ffffff', marginLeft: 10, width: 300 }}>
+            <Typography sx={{ color: '#ffffff', marginLeft: 4, width: 300, cursor: 'pointer' }}>
               606-607, Princes Business Skypark, AB RD, LIG Colony, Indore, Madhya Pradesh, India.
             </Typography>
           </div>
         </div>
         <div style={{ marginTop: '5%', display: 'flex' }}>
           <div>
-            <Features />
+            <ArrowIcon />
           </div>
           <div>
-            <Typography style={{ color: '#ffffff', marginLeft: 10, width: 300 }}>
+            <Typography sx={{ color: '#ffffff', marginLeft: 4, width: 300, cursor: 'pointer' }}>
               MON TO FRI : 10:00AM - 06:00PM
             </Typography>
-            <Typography style={{ color: '#ffffff', marginLeft: 10, width: 300 }}>
+            <Typography sx={{ color: '#ffffff', marginLeft: 4, width: 300 }}>
               +123 54214 578 52
             </Typography>
           </div>
         </div>
         <div style={{ marginTop: '5%', display: 'flex' }}>
           <div>
-            <Features />
+            <ArrowIcon />
           </div>
           <div>
-            <Typography style={{ color: '#ffffff', marginLeft: 10, width: 300 }}>
+            <Typography sx={{ color: '#ffffff', marginLeft: 4, width: 300, cursor: 'pointer' }}>
               Social Networks
             </Typography>
-            <Typography style={{ color: '#ffffff', marginLeft: 10, width: 300 }}>
+            <Typography sx={{ color: '#ffffff', marginLeft: 4, width: 300, cursor: 'pointer' }}>
               Linkedin, facebook, instagram, twiiter
             </Typography>
           </div>
@@ -85,14 +89,30 @@ const Footer = () => {
         <div>
           <Typography
             variant="h4"
-            sx={{ color: '#ffffff', borderBottom: '1px solid #ED003F', width: '90%' }}
+            sx={{
+              color: '#ffffff',
+              borderBottom: '1px solid #ED003F',
+              width: '90%',
+              cursor: 'pointer',
+            }}
           >
             Quick Links
           </Typography>
         </div>
         <div style={{ paddingTop: '2%' }}>
           {navItems.map((item) => (
-            <Typography key={item} style={{ color: '#ffffff' }}>
+            <Typography
+              key={item}
+              sx={{
+                color: '#ffffff',
+                marginTop: '2%',
+                marginBottom: '2%',
+                cursor: 'pointer',
+                '&:hover': {
+                  color: '#ED003F',
+                },
+              }}
+            >
               {item}
             </Typography>
           ))}
@@ -109,7 +129,18 @@ const Footer = () => {
         </div>
         <div style={{ paddingTop: '2%' }}>
           {services.map((item) => (
-            <Typography key={item} style={{ color: '#ffffff' }}>
+            <Typography
+              key={item}
+              sx={{
+                color: '#ffffff',
+                marginTop: '2%',
+                marginBottom: '2%',
+                cursor: 'pointer',
+                '&:hover': {
+                  color: '#ED003F',
+                },
+              }}
+            >
               {item}
             </Typography>
           ))}

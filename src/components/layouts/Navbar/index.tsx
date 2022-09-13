@@ -64,7 +64,7 @@ const Navbar = () => {
               borderRadius: 8,
               width: 160,
               backgroundColor: '#ED003F',
-              color: 'white',
+              color: '#ffffff',
               '&:hover': {
                 backgroundColor: 'purple',
               },
