@@ -12,6 +12,7 @@ const HeaderSection = () => {
       <Wave
         style={{
           height: '95vh',
+          width: '100%',
           zIndex: 5,
           margin: 0,
           transform: 'rotate(180deg)',
@@ -52,6 +53,7 @@ const HeaderSection = () => {
               display: 'flex',
               justifyContent: { xl: 'flex-end', xs: 'center' },
               alignItems: 'center',
+              mt: { lg: 0, xs: 15 },
               // pr: '15%',
               // pl: '15%',
             }}
@@ -112,7 +114,7 @@ const HeaderSection = () => {
             sx={{
               // border: '1px solid black',
               mt: 10,
-              display: 'flex',
+              display: { lg: 'flex', xs: 'none' },
               width: '100%',
               justifyContent: { xl: 'flex-end', xs: 'center' },
               alignItems: 'center',

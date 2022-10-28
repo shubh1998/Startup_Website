@@ -45,9 +45,9 @@ const ClientReviewSection = () => {
           <Grid
             key={item.id}
             item
-            xs={6}
-            md={4}
-            sx={{ display: 'flex', justifyContent: { md: 'center', xs: 'flex-end' } }}
+            xs={12}
+            lg={4}
+            sx={{ display: 'flex', justifyContent: { md: 'center', xs: 'center' } }}
           >
             <Fade left>
               <div style={{ position: 'relative', marginTop: '60px' }}>

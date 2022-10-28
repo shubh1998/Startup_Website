@@ -34,7 +34,7 @@ const Footer = () => {
         paddingBottom: '5%',
       }}
     >
-      <Grid item lg={4}>
+      <Grid item xs={12} lg={4}>
         <div>
           <Typography
             variant="h4"
@@ -53,7 +53,7 @@ const Footer = () => {
             <ArrowIcon />
           </div>
           <div>
-            <Typography sx={{ color: '#ffffff', marginLeft: 4, width: 300, cursor: 'pointer' }}>
+            <Typography sx={{ color: '#ffffff', paddingLeft: 4, cursor: 'pointer' }}>
               606-607, Princes Business Skypark, AB RD, LIG Colony, Indore, Madhya Pradesh, India.
             </Typography>
           </div>
@@ -63,12 +63,10 @@ const Footer = () => {
             <ArrowIcon />
           </div>
           <div>
-            <Typography sx={{ color: '#ffffff', marginLeft: 4, width: 300, cursor: 'pointer' }}>
+            <Typography sx={{ color: '#ffffff', paddingLeft: 4, cursor: 'pointer' }}>
               MON TO FRI : 10:00AM - 06:00PM
             </Typography>
-            <Typography sx={{ color: '#ffffff', marginLeft: 4, width: 300 }}>
-              +123 54214 578 52
-            </Typography>
+            <Typography sx={{ color: '#ffffff', paddingLeft: 4 }}>+123 54214 578 52</Typography>
           </div>
         </div>
         <div style={{ marginTop: '5%', display: 'flex' }}>
@@ -76,16 +74,23 @@ const Footer = () => {
             <ArrowIcon />
           </div>
           <div>
-            <Typography sx={{ color: '#ffffff', marginLeft: 4, width: 300, cursor: 'pointer' }}>
+            <Typography sx={{ color: '#ffffff', paddingLeft: 4, cursor: 'pointer' }}>
               Social Networks
             </Typography>
-            <Typography sx={{ color: '#ffffff', marginLeft: 4, width: 300, cursor: 'pointer' }}>
+            <Typography sx={{ color: '#ffffff', paddingLeft: 4, cursor: 'pointer' }}>
               Linkedin, facebook, instagram, twiiter
             </Typography>
           </div>
         </div>
       </Grid>
-      <Grid item lg={4}>
+      <Grid
+        item
+        xs={12}
+        lg={4}
+        sx={{
+          marginTop: { xs: '30px', lg: '0px' },
+        }}
+      >
         <div>
           <Typography
             variant="h4"
@@ -104,6 +109,7 @@ const Footer = () => {
             <Typography
               key={item}
               sx={{
+                width: 'fit-content',
                 color: '#ffffff',
                 marginTop: '2%',
                 marginBottom: '2%',
@@ -118,7 +124,14 @@ const Footer = () => {
           ))}
         </div>
       </Grid>
-      <Grid item lg={4}>
+      <Grid
+        item
+        xs={12}
+        lg={4}
+        sx={{
+          marginTop: { xs: '30px', lg: '0px' },
+        }}
+      >
         <div>
           <Typography
             variant="h4"
@@ -132,6 +145,7 @@ const Footer = () => {
             <Typography
               key={item}
               sx={{
+                width: 'fit-content',
                 color: '#ffffff',
                 marginTop: '2%',
                 marginBottom: '2%',
