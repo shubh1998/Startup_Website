@@ -1,5 +1,4 @@
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+import CloseIcon from '@mui/icons-material/Close'
 import MenuIcon from '@mui/icons-material/Menu'
 import {
   AppBar,
@@ -15,163 +14,66 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material'
-import { styled, useTheme } from '@mui/material/styles'
 import React, { useState } from 'react'
 
-const drawerWidth = 240
+import { DrawerHeader, styles } from './Navbar.styles'
 
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-  justifyContent: 'flex-end',
-}))
+const navItems = ['Home', 'Services', 'Technologies', 'Projects', 'Industry Solutions', 'About Us']
 
 const Navbar = () => {
-  const theme = useTheme()
   const [open, setOpen] = useState(false)
-
-  const handleDrawerOpen = () => {
-    setOpen(true)
+  const handleDrawer = () => {
+    setOpen(!open)
   }
-
-  const handleDrawerClose = () => {
-    setOpen(false)
-  }
-
-  const navItems = [
-    'Home',
-    'Services',
-    'Technologies',
-    'Projects',
-    'Industry Solutions',
-    'About Us',
-  ]
 
   return (
     <>
-      <AppBar
-        position="fixed"
-        sx={{
-          backgroundColor: '#140a42',
-          boxShadow: 'none',
-          height: 85,
-          // border: '2px solid black',
-          color: 'black',
-          pt: '10px',
-          pr: { xs: '5%', lg: '10%' },
-          pl: { xs: '5%', lg: '10%' },
-        }}
-      >
+      <AppBar position="fixed" sx={styles.appBarRoot}>
         <Toolbar>
-          <IconButton
-            // color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerOpen}
-            sx={{ color: 'white', display: { xs: 'block', lg: 'none' } }}
-          >
-            <MenuIcon sx={{ fontSize: '32px' }} />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              color: '#ffffff',
-              fontWeight: 800,
-              textAlign: { xs: 'end', lg: 'start' },
-              // display: { xs: 'none', sm: 'block' },
-            }}
-          >
+          <Typography variant="h6" component="div" sx={styles.logoText}>
             Logo
           </Typography>
+          <IconButton onClick={handleDrawer} sx={styles.hamIconContainer}>
+            <MenuIcon sx={{ fontSize: '32px' }} />
+          </IconButton>
           <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
             {navItems.map((item) => (
-              <Button
-                key={item}
-                sx={{
-                  color: '#ffffff',
-                  fontWeight: 550,
-                  textTransform: 'capitalize',
-                  height: 72,
-                  '&:hover': {
-                    borderBottom: '3px solid #ED003F',
-                    borderRadius: 0,
-                  },
-                }}
-              >
+              <Button key={item} sx={styles.navItemStyle}>
                 {item}
               </Button>
             ))}
-            <Button
-              sx={{
-                height: 40,
-                borderRadius: 8,
-                width: 160,
-                backgroundColor: '#ED003F',
-                color: '#ffffff',
-                '&:hover': {
-                  backgroundColor: 'purple',
-                },
-              }}
-              variant="contained"
-            >
+            <Button sx={styles.buttonStyle} variant="contained">
               Start Project
             </Button>
           </Box>
         </Toolbar>
       </AppBar>
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-          },
-        }}
-        variant="persistent"
-        anchor="left"
-        open={open}
-      >
+      <Drawer sx={styles.drawerRoot} variant="persistent" anchor="right" open={open}>
         <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+          <Button sx={{ ...styles.buttonStyle, marginLeft: 1 }} variant="contained">
+            Start Project
+          </Button>
+          <IconButton onClick={handleDrawer}>
+            <CloseIcon />
           </IconButton>
         </DrawerHeader>
         <Divider />
         <List>
           {navItems.map((text) => (
-            <ListItem key={text} disablePadding>
+            <ListItem key={text} disablePadding sx={{ borderBottom: '0.1px solid grey' }}>
               <ListItemButton>
-                {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
                 <ListItemText primary={text} />
               </ListItemButton>
             </ListItem>
           ))}
         </List>
-        <ListItem disablePadding>
+        {/* <ListItem disablePadding>
           <ListItemButton>
-            <Button
-              sx={{
-                height: 40,
-                borderRadius: 8,
-                width: 160,
-                backgroundColor: '#ED003F',
-                color: '#ffffff',
-                '&:hover': {
-                  backgroundColor: 'purple',
-                },
-              }}
-              variant="contained"
-            >
+            <Button sx={styles.buttonStyle} variant="contained">
               Start Project
             </Button>
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
       </Drawer>
     </>
   )

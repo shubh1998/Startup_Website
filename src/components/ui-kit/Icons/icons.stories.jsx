@@ -7,6 +7,10 @@ import ChartsIcon from './iconComponents/ChartsIcon'
 import DoubleQuotesIcon from './iconComponents/DoubleQuotesIcon'
 import HeaderBackgroundIcon from './iconComponents/HeaderBackgroundIcon'
 import LaptopIcon from './iconComponents/LaptopIcon'
+import MediumChartsIcon from './iconComponents/MediumChartsIcon'
+import MediumMeetIcon from './iconComponents/MediumMeetIcon'
+import MediumMobileIcon from './iconComponents/MediumMobileIcon'
+import MediumPeopleIcon from './iconComponents/MediumPeopleIcon'
 import MeetIcon from './iconComponents/MeetIcon'
 import MobileIcon from './iconComponents/MobileIcon'
 import PeopleIcon from './iconComponents/PeopleIcon'
@@ -48,11 +52,27 @@ export const icons = () => (
       </Cell>
 
       <Cell>
+        <MediumChartsIcon title="MediumChartsIcon" />
+      </Cell>
+
+      <Cell>
+        <MediumMeetIcon title="MediumMeetIcon" />
+      </Cell>
+
+      <Cell>
+        <MediumMobileIcon title="MediumMobileIcon" />
+      </Cell>
+
+      <Cell>
         <MeetIcon title="MeetIcon" />
       </Cell>
 
       <Cell>
         <MobileIcon title="MobileIcon" />
+      </Cell>
+
+      <Cell>
+        <MediumPeopleIcon title="MediumPeopleIcon" />
       </Cell>
 
       <Cell>

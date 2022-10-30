@@ -2,159 +2,74 @@ import ArrowIcon from '@components/ui-kit/Icons/iconComponents/ArrowIcon'
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
 
-const Footer = () => {
-  const navItems = [
-    'Home',
-    'Services',
-    'Technologies',
-    'Projects',
-    'Industry Solutions',
-    'About Us',
-  ]
-  const services = [
-    'Web Development',
-    'App Development',
-    'UI / UX Design',
-    'Digital Marketing',
-    'QA Solutions',
-    'Software Development',
-    'Cloud Solutions and Devops',
-  ]
+import { styles } from './Footer.styles'
 
+const navItems = ['Home', 'Services', 'Technologies', 'Projects', 'Industry Solutions', 'About Us']
+const services = [
+  'Web Development',
+  'App Development',
+  'UI / UX Design',
+  'Digital Marketing',
+  'QA Solutions',
+  'Software Development',
+  'Cloud Solutions and Devops',
+]
+
+const Footer = () => {
   return (
-    <Grid
-      container
-      sx={{
-        height: '100%',
-        backgroundColor: '#212529',
-        marginTop: 10,
-        paddingTop: '2%',
-        paddingLeft: '10%',
-        paddingRight: '10%',
-        paddingBottom: '5%',
-      }}
-    >
+    <Grid container sx={styles.root}>
       <Grid item xs={12} lg={4}>
         <div>
-          <Typography
-            variant="h4"
-            sx={{
-              color: '#ffffff',
-              borderBottom: '1px solid #ED003F',
-              width: '90%',
-              cursor: 'pointer',
-            }}
-          >
+          <Typography variant="h4" sx={styles.footerHeading}>
             Logo
           </Typography>
         </div>
-        <div style={{ paddingTop: '3%', display: 'flex', cursor: 'pointer' }}>
+        <div style={styles.addressContainer}>
+          <div>
+            <ArrowIcon />
+          </div>
+          <Typography sx={styles.textStyle}>
+            606-607, Princes Business Skypark, AB RD, LIG Colony, Indore, Madhya Pradesh, India.
+          </Typography>
+        </div>
+        <div style={styles.flexContainer}>
           <div>
             <ArrowIcon />
           </div>
           <div>
-            <Typography sx={{ color: '#ffffff', paddingLeft: 4, cursor: 'pointer' }}>
-              606-607, Princes Business Skypark, AB RD, LIG Colony, Indore, Madhya Pradesh, India.
-            </Typography>
+            <Typography sx={styles.textStyle}>MON TO FRI : 10:00AM - 06:00PM</Typography>
+            <Typography sx={styles.contactContainer}>+123 54214 578 52</Typography>
           </div>
         </div>
-        <div style={{ marginTop: '5%', display: 'flex' }}>
+        <div style={styles.flexContainer}>
           <div>
             <ArrowIcon />
           </div>
           <div>
-            <Typography sx={{ color: '#ffffff', paddingLeft: 4, cursor: 'pointer' }}>
-              MON TO FRI : 10:00AM - 06:00PM
-            </Typography>
-            <Typography sx={{ color: '#ffffff', paddingLeft: 4 }}>+123 54214 578 52</Typography>
-          </div>
-        </div>
-        <div style={{ marginTop: '5%', display: 'flex' }}>
-          <div>
-            <ArrowIcon />
-          </div>
-          <div>
-            <Typography sx={{ color: '#ffffff', paddingLeft: 4, cursor: 'pointer' }}>
-              Social Networks
-            </Typography>
-            <Typography sx={{ color: '#ffffff', paddingLeft: 4, cursor: 'pointer' }}>
-              Linkedin, facebook, instagram, twiiter
-            </Typography>
+            <Typography sx={styles.textStyle}>Social Networks</Typography>
+            <Typography sx={styles.textStyle}>Linkedin, facebook, instagram, twiiter</Typography>
           </div>
         </div>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        lg={4}
-        sx={{
-          marginTop: { xs: '30px', lg: '0px' },
-        }}
-      >
-        <div>
-          <Typography
-            variant="h4"
-            sx={{
-              color: '#ffffff',
-              borderBottom: '1px solid #ED003F',
-              width: '90%',
-              cursor: 'pointer',
-            }}
-          >
-            Quick Links
-          </Typography>
-        </div>
-        <div style={{ paddingTop: '2%' }}>
+      <Grid item xs={12} lg={4} sx={{ marginTop: { xs: '30px', lg: '0px' } }}>
+        <Typography variant="h4" sx={styles.footerHeading}>
+          Quick Links
+        </Typography>
+        <div style={styles.pt2}>
           {navItems.map((item) => (
-            <Typography
-              key={item}
-              sx={{
-                width: 'fit-content',
-                color: '#ffffff',
-                marginTop: '2%',
-                marginBottom: '2%',
-                cursor: 'pointer',
-                '&:hover': {
-                  color: '#ED003F',
-                },
-              }}
-            >
+            <Typography key={item} sx={styles.linksStyle}>
               {item}
             </Typography>
           ))}
         </div>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        lg={4}
-        sx={{
-          marginTop: { xs: '30px', lg: '0px' },
-        }}
-      >
-        <div>
-          <Typography
-            variant="h4"
-            sx={{ color: '#ffffff', borderBottom: '1px solid #ED003F', width: '90%' }}
-          >
-            Services
-          </Typography>
-        </div>
-        <div style={{ paddingTop: '2%' }}>
+      <Grid item xs={12} lg={4} sx={{ marginTop: { xs: '30px', lg: '0px' } }}>
+        <Typography variant="h4" sx={styles.footerHeading}>
+          Services
+        </Typography>
+        <div style={styles.pt2}>
           {services.map((item) => (
-            <Typography
-              key={item}
-              sx={{
-                width: 'fit-content',
-                color: '#ffffff',
-                marginTop: '2%',
-                marginBottom: '2%',
-                cursor: 'pointer',
-                '&:hover': {
-                  color: '#ED003F',
-                },
-              }}
-            >
+            <Typography key={item} sx={styles.linksStyle}>
               {item}
             </Typography>
           ))}
