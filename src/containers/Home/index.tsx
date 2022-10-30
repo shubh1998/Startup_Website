@@ -1,15 +1,15 @@
 import Footer from '@components/layouts/Footer'
-import ClientReviewSection from '@containers/Sections/ClientReviewSection'
-import ConnectWithUsSection from '@containers/Sections/ConnectWithUsSection'
-import HeaderSection from '@containers/Sections/HeaderSection'
-import KnowYourBusinessSection from '@containers/Sections/KnowYourBusinessSection'
-import PeoplesTrustSection from '@containers/Sections/PeoplesTrustSection'
+import BannerSection from '@containers/Home/components/BannerSection'
+import ClientReviewSection from '@containers/Home/components/ClientReviewSection'
+import ConnectWithUsSection from '@containers/Home/components/ConnectWithUsSection'
+import KnowYourBusinessSection from '@containers/Home/components/KnowYourBusinessSection'
+import PeoplesTrustSection from '@containers/Home/components/PeoplesTrustSection'
 
 const Home: NextPage = () => {
   return (
     <>
       {/* Header Section */}
-      <HeaderSection />
+      <BannerSection />
 
       {/* Know Your Business Section */}
       <KnowYourBusinessSection />
