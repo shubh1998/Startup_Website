@@ -7,6 +7,14 @@ export const ClientReviewSectionHeading = styled('div')(() => ({
   marginTop: '3%',
 }))
 
+export const ServicesSectionHeading = styled('div')(() => ({
+  width: '100%',
+  display: 'flex',
+  marginTop: '10px',
+  justifyContent: 'center',
+  alignItems: 'center',
+}))
+
 export const ReviewCard = styled('div')(() => ({
   position: 'relative',
   marginTop: '60px',
@@ -55,14 +63,46 @@ export const PeoplesSectionContentContainer = styled('div')(() => ({
   marginTop: '15px',
 }))
 
+export const TechTabContainer = styled('div')(() => ({
+  // display: 'flex',
+  // flexWrap: 'wrap',
+  // justifyContent: 'space-around',
+  // flexDirection: 'row',
+  display: 'grid',
+  gridTemplateColumns: 'repeat( auto-fit, minmax(250px, 1fr) )',
+  gap: '10px',
+}))
+
+export const TechTiles = styled('div')(() => ({
+  // width: 100,
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  paddingBottom: 10,
+  boxShadow: 'rgba(0, 0, 0, 0.06) 0px 12px 14px',
+  transition: 'all .3s ease-in-out',
+  '&:hover': {
+    boxShadow: 'rgba(0, 0, 0, 0.22) 0px 19px 43px',
+    transform: 'translate3d(0px, -1px, 0px)',
+  },
+}))
+
 export const styles = {
   headingStyle: {
     fontSize: 32,
     fontWeight: 800,
     color: '#5b5b98',
   },
+  subHeadingStyle: {
+    fontSize: 16,
+    marginTop: '5px',
+    color: 'gray',
+    width: '40%',
+    textAlign: 'center',
+  },
   reviewsContainer: {
-    width: { xl: '70%', lg: '90%', xs: '100%' },
+    width: { xl: '80%', lg: '95%', xs: '100%' },
     margin: 'auto',
   },
   reviewItemContainer: {
@@ -73,9 +113,26 @@ export const styles = {
     width: 350,
     borderRadius: 2,
   },
+  serviceCardStyle: {
+    width: 400,
+    padding: '10px',
+    borderRadius: 2,
+    boxShadow: 'rgba(0, 0, 0, 0.06) 0px 12px 14px',
+    transition: 'all .3s ease-in-out',
+    '&:hover': {
+      boxShadow: 'rgba(0, 0, 0, 0.22) 0px 19px 43px',
+      transform: 'translate3d(0px, -1px, 0px)',
+    },
+  },
   clientNameStyle: {
     fontWeight: 800,
     fontSize: '32px',
+    width: '100%',
+    textAlign: 'center',
+  },
+  techNameStyle: {
+    fontWeight: 800,
+    fontSize: '22px',
     width: '100%',
     textAlign: 'center',
   },
@@ -202,5 +259,18 @@ export const styles = {
     color: '#5b5b98',
     width: '100%',
     textAlign: 'center',
+  },
+  techTextStyle: {
+    fontSize: 16,
+    fontWeight: 800,
+    color: 'gray',
+  },
+  techContainer: {
+    margin: 'auto',
+    width: '70%',
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
 }

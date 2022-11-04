@@ -5,6 +5,9 @@ import ConnectWithUsSection from '@containers/Home/components/ConnectWithUsSecti
 import KnowYourBusinessSection from '@containers/Home/components/KnowYourBusinessSection'
 import PeoplesTrustSection from '@containers/Home/components/PeoplesTrustSection'
 
+import OurServicesSection from './components/OurServicesSection'
+import TechnologiesWeUseSection from './components/TechnologiesWeUseSection'
+
 const Home: NextPage = () => {
   return (
     <>
@@ -14,8 +17,14 @@ const Home: NextPage = () => {
       {/* Know Your Business Section */}
       <KnowYourBusinessSection />
 
+      {/* Technologies we use Section */}
+      <TechnologiesWeUseSection />
+
       {/* People Trust Section */}
       <PeoplesTrustSection />
+
+      {/* Our Services Section */}
+      <OurServicesSection />
 
       {/* Client Review Section */}
       <ClientReviewSection />

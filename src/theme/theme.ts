@@ -176,27 +176,27 @@ export const theme = createTheme({
       },
     },
   },
-  // palette: {
-  //   primary: {
-  //     main: colors.purple,
-  //     light: colors.lightPurple,
-  //     dark: colors.purple
-  //   },
-  //   error: {
-  //     main: colors.red
-  //   },
-  //   success: {
-  //     main: colors.activeGreen
-  //   }
-  // },
+  palette: {
+    primary: {
+      main: colors.primary,
+      // light: colors.lightPurple,
+      // dark: colors.purple,
+    },
+    // error: {
+    //   main: colors.red,
+    // },
+    // success: {
+    //   main: colors.activeGreen,
+    // },
+  },
   // typography: {
   //   button: {
-  //     textTransform: 'none'
+  //     textTransform: 'none',
   //   },
-  //   fontFamily: ['Poppins', 'sans-serif'].join(',')
+  //   fontFamily: ['Poppins', 'sans-serif'].join(','),
   // },
   // drawer: {
-  //   width: 240
+  //   width: 240,
   // },
   colors,
   // drawerWidth: 300
