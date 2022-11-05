@@ -1,7 +1,7 @@
 import { ClientReviewSectionHeading, styles } from '@containers/Home/Home.styles'
 import CssIcon from '@mui/icons-material/Css'
 import HtmlIcon from '@mui/icons-material/Html'
-import { Tab, Tabs, Typography } from '@mui/material'
+import { Tab, Tabs, Typography, useMediaQuery } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 
@@ -92,9 +92,9 @@ function TabPanel(props) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
-      style={{ width: '100%' }}
+      style={{ width: '100%', backgroundColor: '#f9f9fc' }}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <Box sx={{ m: 3 }}>{children}</Box>}
     </div>
   )
 }
@@ -107,6 +107,7 @@ function a11yProps(index) {
 }
 
 const TechnologiesWeUseSection = () => {
+  const matches = useMediaQuery((theme) => theme.breakpoints.up('md'))
   const [value, setValue] = React.useState(0)
 
   const handleChange = (event, newValue) => {
@@ -117,7 +118,7 @@ const TechnologiesWeUseSection = () => {
       <ClientReviewSectionHeading sx={{ mb: 5 }}>
         <Typography sx={styles.headingStyle}>Technologies We Use</Typography>
       </ClientReviewSectionHeading>
-      <Box sx={styles.techContainer}>
+      <Box sx={styles.techContainer(matches)}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider', width: '100%' }}>
           <Tabs
             value={value}

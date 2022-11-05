@@ -10,7 +10,7 @@ import TechnologiesWeUseSection from './components/TechnologiesWeUseSection'
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div style={{ backgroundColor: '#f9f9fc' }}>
       {/* Header Section */}
       <BannerSection />
 
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       <ConnectWithUsSection />
 
       <Footer />
-    </>
+    </div>
   )
 }
 
