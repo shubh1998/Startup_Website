@@ -69,7 +69,7 @@ export const TechTabContainer = styled('div')(() => ({
   // justifyContent: 'space-around',
   // flexDirection: 'row',
   display: 'grid',
-  gridTemplateColumns: 'repeat( auto-fit, minmax(250px, 1fr) )',
+  gridTemplateColumns: 'repeat( auto-fit, minmax(150px, 1fr) )',
   gap: '10px',
 }))
 
@@ -80,7 +80,8 @@ export const TechTiles = styled('div')(() => ({
   justifyContent: 'center',
   alignItems: 'center',
   paddingBottom: 10,
-  boxShadow: 'rgba(0, 0, 0, 0.06) 0px 12px 14px',
+  boxShadow: 'rgba(0, 0, 0, 0.06) 1px 1px 5px 5px',
+  borderRadius: 5,
   transition: 'all .3s ease-in-out',
   '&:hover': {
     boxShadow: 'rgba(0, 0, 0, 0.22) 0px 19px 43px',
@@ -98,23 +99,23 @@ export const styles = {
     fontSize: 16,
     marginTop: '5px',
     color: 'gray',
-    width: '40%',
-    textAlign: 'center',
+    width: '50%',
   },
   reviewsContainer: {
     width: { xl: '80%', lg: '95%', xs: '100%' },
     margin: 'auto',
+    justifyContent: { md: 'center', xs: 'center' },
   },
   reviewItemContainer: {
     display: 'flex',
     justifyContent: { md: 'center', xs: 'center' },
   },
   reviewCardStyle: {
-    width: 350,
+    width: { xl: 350, lg: 350, xs: '99%' },
     borderRadius: 2,
   },
   serviceCardStyle: {
-    width: 400,
+    width: { xl: 400, lg: 400, xs: '99%' },
     padding: '10px',
     borderRadius: 2,
     boxShadow: 'rgba(0, 0, 0, 0.06) 0px 12px 14px',
@@ -265,12 +266,12 @@ export const styles = {
     fontWeight: 800,
     color: 'gray',
   },
-  techContainer: {
+  techContainer: (desktopView) => ({
     margin: 'auto',
-    width: '70%',
+    width: desktopView ? '70%' : '100%',
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
     alignItems: 'center',
-  },
+  }),
 }
