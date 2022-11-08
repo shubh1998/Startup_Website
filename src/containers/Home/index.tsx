@@ -5,6 +5,7 @@ import ConnectWithUsSection from '@containers/Home/components/ConnectWithUsSecti
 import KnowYourBusinessSection from '@containers/Home/components/KnowYourBusinessSection'
 import PeoplesTrustSection from '@containers/Home/components/PeoplesTrustSection'
 
+import OurClientRecommendation from './components/OurClientRecommendation'
 import OurServicesSection from './components/OurServicesSection'
 import TechnologiesWeUseSection from './components/TechnologiesWeUseSection'
 
@@ -25,6 +26,8 @@ const Home: NextPage = () => {
 
       {/* Our Services Section */}
       <OurServicesSection />
+
+      <OurClientRecommendation />
 
       {/* Client Review Section */}
       <ClientReviewSection />

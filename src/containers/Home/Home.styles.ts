@@ -149,6 +149,30 @@ export const styles = {
     width: '100%',
     textAlign: 'center',
   },
+  clientRecommendationTextStyle: {
+    fontSize: '20px',
+    width: '80%',
+    color: 'gray',
+    width: '100%',
+    textAlign: 'left',
+  },
+  clientNameTextStyle: {
+    fontSize: '24px',
+    width: '80%',
+    color: 'black',
+    width: '100%',
+    fontWeight: 800,
+    textAlign: 'left',
+    marginTop: '20px',
+  },
+  clientPositionStyle: {
+    fontSize: '22px',
+    width: '80%',
+    color: 'gray',
+    width: '100%',
+    fontWeight: 800,
+    textAlign: 'left',
+  },
   connectWithUsRoot: {
     width: { xl: '80%', lg: '90%', xs: '100%' },
     margin: '60px auto auto auto',
@@ -290,4 +314,17 @@ export const styles = {
     flexDirection: 'column',
     alignItems: 'center',
   }),
+  clientRecommendContainer: {
+    width: '80%',
+    borderRadius: 8,
+    display: 'flex',
+    margin: 'auto',
+    mt: '20px',
+  },
+  videoContainer: {
+    padding: '10px',
+    // border: '1px solid',
+    display: 'flex',
+    justifyContent: 'center',
+  },
 }
