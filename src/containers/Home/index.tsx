@@ -5,6 +5,7 @@ import ConnectWithUsSection from '@containers/Home/components/ConnectWithUsSecti
 import KnowYourBusinessSection from '@containers/Home/components/KnowYourBusinessSection'
 import PeoplesTrustSection from '@containers/Home/components/PeoplesTrustSection'
 
+import Certification from './components/Certification'
 import OurClientRecommendation from './components/OurClientRecommendation'
 import OurServicesSection from './components/OurServicesSection'
 import TechnologiesWeUseSection from './components/TechnologiesWeUseSection'
@@ -34,6 +35,8 @@ const Home: NextPage = () => {
 
       {/* Connect with us Section */}
       <ConnectWithUsSection />
+
+      <Certification />
 
       <Footer />
     </div>

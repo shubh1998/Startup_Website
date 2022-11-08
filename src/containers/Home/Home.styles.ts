@@ -20,6 +20,10 @@ export const ReviewCard = styled('div')(() => ({
   marginTop: '60px',
 }))
 
+export const CertificateCard = styled('div')(() => ({
+  // marginTop: '60px',
+}))
+
 export const AvatarContainer = styled('div')(() => ({
   position: 'absolute',
   top: -40,
@@ -115,6 +119,20 @@ export const styles = {
     justifyContent: { md: 'center', xs: 'center' },
     // height: 200,
   },
+  certificationItemContainer: {
+    // display: 'flex',
+    // justifyContent: { md: 'center', xs: 'center' },
+    width: { xs: '80%', lg: '60%' },
+    paddingTop: '40px',
+    margin: 'auto',
+    display: 'grid',
+    gridTemplateColumns: 'repeat( auto-fit, minmax(140px, 1fr) )',
+    gap: { xs: '10px', lg: '20px' },
+  },
+  ceertificateCardStyle: {
+    backgroundColor: 'darkgray',
+    boxShadow: 'rgba(0, 0, 0, 0.06) 1px 1px 5px 5px',
+  },
   reviewCardStyle: {
     width: { xl: 350, lg: 350, xs: '99%' },
     borderRadius: 2,
@@ -146,6 +164,14 @@ export const styles = {
     fontSize: '18px',
     width: '80%',
     color: 'gray',
+    width: '100%',
+    textAlign: 'center',
+  },
+  descriptionStyle: {
+    fontSize: '18px',
+    margin: 'auto',
+    maxWidth: '160px',
+    color: 'white',
     width: '100%',
     textAlign: 'center',
   },
