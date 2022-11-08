@@ -1,7 +1,16 @@
 import MediumMobileIcon from '@components/ui-kit/Icons/iconComponents/MediumMobileIcon'
 import MobileIcon from '@components/ui-kit/Icons/iconComponents/MobileIcon'
 import { FormContainer, styles } from '@containers/Home/Home.styles'
-import { Button, Grid, TextField, Typography, useMediaQuery, useTheme } from '@mui/material'
+import {
+  Button,
+  Checkbox,
+  FormControlLabel,
+  Grid,
+  TextField,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material'
 import React from 'react'
 
 const ConnectWithUsSection = () => {
@@ -15,22 +24,41 @@ const ConnectWithUsSection = () => {
       </Grid>
       <Grid item xs={12} lg={6} sx={styles.formRoot}>
         <Typography sx={styles.formHeading} gutterBottom>
-          Connect With Us
+          Get In Touch
         </Typography>
         <Typography sx={styles.formBody} gutterBottom>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum
-          est a, mattis tellus.
+          Talk to our experts about your project requirement. We would love to talking with you and
+          helping you in the best possible manner.
         </Typography>
         <FormContainer>
-          <TextField required fullWidth id="outlined-required" defaultValue="Hello World" />
+          <TextField required fullWidth id="outlined-required" defaultValue="name" />
           <TextField
             sx={{ mt: '20px' }}
             required
             fullWidth
             id="outlined-required"
-            defaultValue="Hello World"
+            defaultValue="email"
           />
-          <Button sx={styles.buttonStyle} variant="contained">
+          <TextField
+            sx={{ mt: '20px' }}
+            required
+            fullWidth
+            id="outlined-required"
+            defaultValue="services"
+          />
+          <TextField
+            sx={{ mt: '20px' }}
+            required
+            fullWidth
+            id="outlined-required"
+            defaultValue="message"
+            multiline
+            rows={4}
+          />
+          <div style={{ marginTop: '20px' }}>
+            <FormControlLabel control={<Checkbox defaultChecked />} label="Terms and conditions" />
+          </div>
+          <Button sx={styles.formButtonStyle} variant="contained">
             Submit
           </Button>
         </FormContainer>

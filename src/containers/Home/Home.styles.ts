@@ -188,6 +188,17 @@ export const styles = {
       backgroundColor: 'purple',
     },
   },
+  formButtonStyle: {
+    height: 40,
+    mt: '20px',
+    borderRadius: 8,
+    width: 150,
+    backgroundColor: '#5b5b98',
+    color: 'white',
+    '&:hover': {
+      backgroundColor: 'purple',
+    },
+  },
   waveStyle: {
     height: '95vh',
     width: '100%',
