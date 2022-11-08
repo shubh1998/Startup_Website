@@ -110,6 +110,11 @@ export const styles = {
     display: 'flex',
     justifyContent: { md: 'center', xs: 'center' },
   },
+  servicesItemContainer: {
+    display: 'flex',
+    justifyContent: { md: 'center', xs: 'center' },
+    // height: 200,
+  },
   reviewCardStyle: {
     width: { xl: 350, lg: 350, xs: '99%' },
     borderRadius: 2,
@@ -138,7 +143,7 @@ export const styles = {
     textAlign: 'center',
   },
   reviewDescriptionStyle: {
-    fontSize: '15px',
+    fontSize: '18px',
     width: '80%',
     color: 'gray',
     width: '100%',

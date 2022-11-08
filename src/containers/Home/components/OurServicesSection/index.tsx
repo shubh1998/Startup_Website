@@ -15,37 +15,37 @@ const allReviews = [
     id: 1,
     technology: 'IT Consultancy',
     content:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
+      'Using cutting-edge technology, we work on the front-end and back-end of websites. Our developers deliver a website that works seamlessly on different browsers and interacts effectively with our clients audience.',
   },
   {
     id: 2,
     technology: 'Web Development',
     content:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
+      'Using cutting-edge technology, we work on the front-end and back-end of websites. Our developers deliver a website that works seamlessly on different browsers and interacts effectively with our clients audience.',
   },
   {
     id: 3,
     technology: 'Digital Marketing',
     content:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
+      'Using cutting-edge technology, we work on the front-end and back-end of websites. Our developers deliver a website that works seamlessly on different browsers and interacts effectively with our clients audience.',
   },
   {
     id: 4,
     technology: 'IT Consultancy',
     content:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
+      'Using cutting-edge technology, we work on the front-end and back-end of websites. Our developers deliver a website that works seamlessly on different browsers and interacts effectively with our clients audience.',
   },
   {
     id: 5,
     technology: 'Web Development',
     content:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
+      'Using cutting-edge technology, we work on the front-end and back-end of websites. Our developers deliver a website that works seamlessly on different browsers and interacts effectively with our clients audience.',
   },
   {
     id: 6,
     technology: 'Digital Marketing',
     content:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
+      'Using cutting-edge technology, we work on the front-end and back-end of websites. Our developers deliver a website that works seamlessly on different browsers and interacts effectively with our clients audience.',
   },
 ]
 
@@ -63,7 +63,7 @@ const OurServicesSection = () => {
       </ServicesSectionHeading>
       <Grid container sx={styles.reviewsContainer}>
         {allReviews.map((item) => (
-          <Grid key={item.id} item xs={12} lg={4} sx={styles.reviewItemContainer}>
+          <Grid key={item.id} item xs={12} lg={4} sx={styles.servicesItemContainer}>
             <Fade left>
               <ReviewCard>
                 <Card sx={styles.serviceCardStyle}>
