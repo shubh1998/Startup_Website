@@ -8,6 +8,7 @@ import PeoplesTrustSection from '@containers/Home/components/PeoplesTrustSection
 import Certification from './components/Certification'
 import OurClientRecommendation from './components/OurClientRecommendation'
 import OurServicesSection from './components/OurServicesSection'
+import ProcessWeFollow from './components/ProcessWeFollow'
 import TechnologiesWeUseSection from './components/TechnologiesWeUseSection'
 
 const Home: NextPage = () => {
@@ -16,28 +17,21 @@ const Home: NextPage = () => {
       {/* Header Section */}
       <BannerSection />
 
+      <ProcessWeFollow />
       {/* Know Your Business Section */}
       <KnowYourBusinessSection />
-
       {/* Technologies we use Section */}
       <TechnologiesWeUseSection />
-
       {/* People Trust Section */}
       <PeoplesTrustSection />
-
       {/* Our Services Section */}
       <OurServicesSection />
-
       <OurClientRecommendation />
-
       {/* Client Review Section */}
       <ClientReviewSection />
-
       {/* Connect with us Section */}
       <ConnectWithUsSection />
-
       <Certification />
-
       <Footer />
     </div>
   )

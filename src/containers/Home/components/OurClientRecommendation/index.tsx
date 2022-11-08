@@ -53,7 +53,7 @@ const OurClientRecommendation = () => {
                 md={7}
                 sx={{
                   paddingTop: '20px',
-                  paddingLeft: '10px',
+                  paddingLeft: '20px',
                 }}
               >
                 <Typography sx={styles.clientRecommendationTextStyle}>{item.content}</Typography>

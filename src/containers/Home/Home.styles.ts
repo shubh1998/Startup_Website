@@ -77,6 +77,12 @@ export const TechTabContainer = styled('div')(() => ({
   gap: '10px',
 }))
 
+export const ProcessContainer = styled('div')(() => ({
+  width: '80%',
+  margin: 'auto',
+  marginTop: '20px',
+}))
+
 export const TechTiles = styled('div')(() => ({
   // width: 100,
   display: 'flex',
@@ -137,6 +143,17 @@ export const styles = {
     width: { xl: 350, lg: 350, xs: '99%' },
     borderRadius: 2,
   },
+  processCardStyle: {
+    mb: '10px',
+    backgroundColor: 'white',
+    boxShadow: 'rgba(0, 0, 0, 0.06) 1px 1px 5px 5px',
+  },
+  imageCardStyle: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyItems: 'center',
+    alignItems: 'center',
+  },
   serviceCardStyle: {
     width: { xl: 400, lg: 400, xs: '99%' },
     padding: '10px',
@@ -160,12 +177,26 @@ export const styles = {
     width: '100%',
     textAlign: 'center',
   },
+  processNameStyle: {
+    fontWeight: 800,
+    fontSize: '22px',
+    width: '100%',
+    textAlign: 'center',
+  },
   reviewDescriptionStyle: {
     fontSize: '18px',
     width: '80%',
     color: 'gray',
     width: '100%',
     textAlign: 'center',
+  },
+  processDescriptionStyle: {
+    fontSize: { xs: '12px', sm: '20px' },
+    width: '80%',
+    color: 'gray',
+    width: '100%',
+    textAlign: 'center',
+    paddingRight: { xs: '0px', md: '20px' },
   },
   descriptionStyle: {
     fontSize: '18px',
